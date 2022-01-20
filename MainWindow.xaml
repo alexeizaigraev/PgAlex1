@@ -1,0 +1,100 @@
+﻿<Window x:Class="PgAlex1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PgAlex1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="841.097" Width="1191.5"
+        WindowState="Maximized">
+    <Grid ForceCursor="True" Background="#FF0DD7E8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+
+            <ColumnDefinition />
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="175" />
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="175" />
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="175" />
+            <ColumnDefinition Width="30" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="10" />
+            <RowDefinition />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Menu Height="50" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="7" Background="#FF1DDBF0">
+            <MenuItem Header="Люди" FontSize="24">
+                <MenuItem Header="Приём" Click="Priem_Click" ></MenuItem>
+                <MenuItem Header="Отпуск" Click="Otpusk_Click"></MenuItem>
+                <MenuItem Header="Перевод" Click="Perevod_Click"></MenuItem>
+                <MenuItem Header="Рассылка"  Click="PostAll_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Всячина" FontSize="24">
+                <MenuItem Header="Кадры отбор"  Click="HrOtbor_Click"></MenuItem>
+                <MenuItem Header="Сайт"  Click="Site_Click"></MenuItem>
+                <MenuItem Header="Наташа" Click="Natasha_Click"></MenuItem>
+                <MenuItem Header="Сводка АБ" Click="SummuryAb_Click"></MenuItem>
+                <MenuItem Header="Терминал"  Click="Term_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Монитор" FontSize="24">
+                <MenuItem Header="Расклад" Click="Rasklad_Click"></MenuItem>
+                <MenuItem Header="Бекап" Click="AccBack_Click"></MenuItem>
+                <MenuItem Header="Монитор" Click="Monitor_Click"></MenuItem>
+                <MenuItem Header="РП" Click="Rp_Click"></MenuItem>
+                <MenuItem Header="Жнец Копи" Click="GnetzCopy_Click"></MenuItem>
+                <MenuItem Header="Жнец Муви" Click="GnetzMovy_Click"></MenuItem>
+                <MenuItem Header="Gdrive BackUp" Click="GdriveBackUp_Click"></MenuItem>
+            </MenuItem>
+            
+            <MenuItem Header="Покажи" FontSize="24">
+                <MenuItem Header="Отбор" Click="ButtonOtborShow_Click">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Отбор" FontSize="24">
+                <MenuItem Header="Отделения от - до" Click="ButtonOtborInputDep_Click">
+                </MenuItem>
+                <MenuItem Header="Отделения список" Click="ButtonOtborInputDepList_Click">
+                </MenuItem>
+                <MenuItem Header="Список терминалов" Click="ButtonOtborInputTermHard_Click">
+                </MenuItem>
+            </MenuItem>
+            
+
+            
+            <MenuItem Header="Обнови" FontSize="24">
+                <MenuItem Header="Из Акцесса" Click="RefresFromAccess_Click"></MenuItem>
+                <MenuItem Header="Листбоксы" Click="RefreshListBox1_Click"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Колонка1" FontSize="24">
+                <MenuItem Header="Терминалы" Click="Col1Terminals_Click"></MenuItem>
+                <MenuItem Header="Отделения" Click="Col1Departments_Click"></MenuItem>
+                <MenuItem Header="Партнёры" Click="Col1Partners_Click"></MenuItem>
+                <MenuItem Header="Папки" Click="Col1Folders_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <ListBox x:Name="listBox1" Grid.Column="7" Grid.Row="6" Grid.RowSpan="5" SelectionMode="Extended" FontSize="24" Foreground="#FF542CBF" Background="#FF92E7F0"/>
+
+        <TextBox x:Name="textBoxErr" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="5" FontSize="24" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Foreground="#FFF02D2D" Background="#FF92E7F0"/>
+        <TextBox x:Name="textBoxFnames" Grid.Column="1" Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="5" FontSize="24" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Foreground="#FF1212FD" Background="#FF92E7F0"/>
+
+        <TextBox x:Name="textBox1" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" FontSize="24" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Foreground="#FF542CBF" Background="#FF92E7F0"/>
+        <Button x:Name="ButtonOtborListTerm" Content="Выбери" Grid.Column="7" Grid.Row="4" Click="ButtonChoise_Click" Height="43" FontSize="24" Background="#FF8FE9F1"/>
+        <Button x:Name="ButtonClear" Content="Очисти" Grid.Column="7" Grid.Row="2" Click="ButtonClear_Click" Height="45" FontSize="24" Background="#FF1DDBF0"/>
+
+        <Label x:Name="labeInfo" Content="labeInfo" Grid.Column="1" Grid.Row="11" FontSize="24" Background="#FF5AF619" HorizontalAlignment="Left" Height="40" Margin="39,0,0,0" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
